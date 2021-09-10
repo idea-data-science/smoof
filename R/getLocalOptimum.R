@@ -36,3 +36,10 @@ getLocalOptimum.smoof_multi_objective_function = function(fn) {
 getLocalOptimum.smoof_wrapped_function = function(fn) {
   return(getLocalOptimum(getWrappedFunction(fn)))
 }
+
+#' @export
+getLocalOptimum.smoof_shifted_function = function(fn) {
+  opt = getLocalOptimum(getWrappedFunction(fn))
+  opt$param = sweep(opt$param, 2, getShift(fn), `+`)
+  opt
+}

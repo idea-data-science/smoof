@@ -16,3 +16,8 @@ isVectorized.smoof_function = function(fn) {
 isVectorized.smoof_wrapped_function = function(fn) {
   return(isVectorized(getWrappedFunction(fn)))
 }
+
+#' @export
+isVectorized.smoof_shifted_function = function(fn) {
+  return(isVectorized(getWrappedFunction(fn)))
+}

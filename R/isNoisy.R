@@ -16,3 +16,8 @@ isNoisy.smoof_function = function(fn) {
 isNoisy.smoof_wrapped_function = function(fn) {
   return(isNoisy(getWrappedFunction(fn)))
 }
+
+#' @export
+isNoisy.smoof_shifted_function = function(fn) {
+  return(isNoisy(getWrappedFunction(fn)))
+}

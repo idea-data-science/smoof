@@ -18,6 +18,12 @@ hasConstraints.smoof_wrapped_function = function(fn) {
   return(hasBoxConstraints(fn) || hasOtherConstraints(fn))
 }
 
+#' @export
+hasConstraints.smoof_shifted_function = function(fn) {
+  fn = getWrappedFunction(fn)
+  return(hasBoxConstraints(fn) || hasOtherConstraints(fn))
+}
+
 #' Checks whether the objective function has box constraints.
 #'
 #' @template arg_smoof_function
@@ -37,6 +43,10 @@ hasBoxConstraints.smoof_wrapped_function = function(fn) {
   return(hasFiniteBoxConstraints(getParamSet(getWrappedFunction(fn))))
 }
 
+#' @export
+hasBoxConstraints.smoof_shifted_function = function(fn) {
+  return(hasFiniteBoxConstraints(getParamSet(getWrappedFunction(fn))))
+}
 #' Checks whether the objective function has other constraints.
 #'
 #' @template arg_smoof_function
@@ -53,5 +63,10 @@ hasOtherConstraints.smoof_function = function(fn) {
 
 #' @export
 hasOtherConstraints.smoof_wrapped_function = function(fn) {
+  return(hasOtherConstraints(getWrappedFunction(fn)))
+}
+
+#' @export
+hasOtherConstraints.smoof_shifted_function = function(fn) {
   return(hasOtherConstraints(getWrappedFunction(fn)))
 }

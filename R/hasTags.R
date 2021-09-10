@@ -41,3 +41,7 @@ hasTags.character = function(fn, tags) {
 hasTags.smoof_wrapped_function = function(fn, tags) {
   return(hasTags(getWrappedFunction(fn), tags))
 }
+
+hasTags.smoof_shifted_function = function(fn, tags) {
+  return(hasTags(getWrappedFunction(fn), tags))
+}

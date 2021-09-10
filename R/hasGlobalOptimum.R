@@ -22,6 +22,12 @@ hasGlobalOptimum.smoof_wrapped_function = function(fn) {
   return(hasGlobalOptimum(getWrappedFunction(fn)))
 }
 
+#' @export
+hasGlobalOptimum.smoof_shifted_function = function(fn) {
+  return(hasGlobalOptimum(getWrappedFunction(fn)))
+}
+
+
 #' Checks whether local optima are known.
 #'
 #' @template arg_smoof_function
@@ -43,5 +49,10 @@ hasLocalOptimum.smoof_multi_objective_function = function(fn) {
 
 #' @export
 hasLocalOptimum.smoof_wrapped_function = function(fn) {
+  return(hasLocalOptimum(getWrappedFunction(fn)))
+}
+
+#' @export
+hasLocalOptimum.smoof_shifted_function = function(fn) {
   return(hasLocalOptimum(getWrappedFunction(fn)))
 }
