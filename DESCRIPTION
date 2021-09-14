@@ -1,47 +1,49 @@
-Package: smoof
 Type: Package
+Package: smoof
 Title: Single and Multi-Objective Optimization Test Functions
-Description: Provides generators for a high number of both single- and multi-
-    objective test functions which are frequently used for the benchmarking of
-    (numerical) optimization algorithms. Moreover, it offers a set of convenient
-    functions to generate, plot and work with objective functions.
 Version: 1.6.0.3
 Date: 2021-06-02
-Authors@R: c(
-  person(
-    given = "Jakob",
-    family = "Bossek",
-    email = "j.bossek@gmail.com",
-    role = c("aut", "cre"),
-    comment = c(ORCID = "0000-0002-4121-4668")),
-  person(
-    given = "Pascal",
-    family = "Kerschke",
-    email = "kerschke@uni-muenster.de",
-    role = "ctb",
-    comment = c(ORCID = "0000-0003-2862-1418")))
+Authors@R: 
+    c(person(given = "Jakob",
+             family = "Bossek",
+             role = c("aut", "cre"),
+             email = "j.bossek@gmail.com",
+             comment = c(ORCID = "0000-0002-4121-4668")),
+      person(given = "Pascal",
+             family = "Kerschke",
+             role = "ctb",
+             email = "kerschke@uni-muenster.de",
+             comment = c(ORCID = "0000-0003-2862-1418")))
 Maintainer: Jakob Bossek <j.bossek@gmail.com>
-URL: https://jakobbossek.github.io/smoof/, https://github.com/jakobbossek/smoof
-BugReports: https://github.com/jakobbossek/smoof/issues
+Description: Provides generators for a high number of both single- and
+    multi- objective test functions which are frequently used for the
+    benchmarking of (numerical) optimization algorithms. Moreover, it
+    offers a set of convenient functions to generate, plot and work with
+    objective functions.
 License: BSD_2_clause + file LICENSE
+URL: https://jakobbossek.github.io/smoof/,
+    https://github.com/jakobbossek/smoof
+BugReports: https://github.com/jakobbossek/smoof/issues
 Depends:
-    ParamHelpers (>= 1.8),
-    checkmate (>= 1.1)
+    checkmate (>= 1.1),
+    ParamHelpers (>= 1.8)
 Imports:
     BBmisc (>= 1.6),
     ggplot2 (>= 2.2.1),
     Rcpp (>= 0.11.0)
 Suggests:
-    testthat,
+    covr,
+    mco,
     plot3D,
     plotly,
-    mco,
     RColorBrewer,
     RJSONIO,
     rPython (>= 0.0-5),
-    covr
-LazyData: yes
+    testthat
+LinkingTo: 
+    Rcpp,
+    RcppArmadillo
 ByteCompile: yes
-LinkingTo: Rcpp, RcppArmadillo
-RoxygenNote: 7.1.1
 Encoding: UTF-8
+LazyData: yes
+RoxygenNote: 7.1.1

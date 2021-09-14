@@ -1,0 +1,17 @@
+repos:
+- repo: https://github.com/lorenzwalthert/precommit
+  rev: v0.1.2
+  hooks:
+  - id: parsable-R
+  - id: no-browser-statement
+  - id: roxygenize
+  - id: use-tidy-description
+  - id: deps-in-desc
+- repo: https://github.com/pre-commit/pre-commit-hooks
+  rev: v4.0.1
+  hooks:
+  - id: check-added-large-files
+    args: ['--maxkb=200']
+  - id: check-case-conflict
+  - id: check-merge-conflict
+  - id: mixed-line-ending
