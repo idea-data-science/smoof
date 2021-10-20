@@ -20,7 +20,7 @@ makeModifiedRastriginFunction = function(dimensions, k = rep(1, dimensions)) {
   force(dimensions)
   makeSingleObjectiveFunction(
     name = sprintf("%i-d Modified Rastrigin Function", dimensions),
-    id = sprintf("rastrigin_%id", dimensions),
+    id = sprintf("modified_rastrigin_%id", dimensions),
     fn = function(x) {
       assertNumeric(x, len = dimensions, any.missing = FALSE, all.missing = FALSE)
       n = length(x)
